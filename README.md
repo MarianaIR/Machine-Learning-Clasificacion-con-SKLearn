@@ -1,63 +1,50 @@
-# 📚 Machine Learning: Clasificación con scikit-learn
+# 🐾 MACHINE LEARNING: CLASIFICACIÓN CON SCIKIT-LEARN
 
-[![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=ffdd54)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=ffdd54)](https://www.python.org/)  
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)  
 [![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)](https://numpy.org/)
-[![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-[![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=flat&logo=matplotlib&logoColor=white)](https://matplotlib.org/)
-[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-FF6F00?style=flat&logo=jupyter&logoColor=white)](https://jupyter.org/)
 
-Este proyecto implementa técnicas de **aprendizaje supervisado** para resolver problemas de clasificación utilizando la librería `scikit-learn` en Python. A través de un enfoque práctico, se exploran diferentes algoritmos de clasificación y se evalúa su rendimiento en un conjunto de datos real.
+Este proyecto es una **introducción práctica a los Algoritmos de Clasificación** dentro del Machine Learning Supervisado, utilizando la librería estándar **Scikit-learn (SKLearn)**. El objetivo es comprender cómo funcionan los modelos de clasificación a través de un ejemplo didáctico de **clasificación binaria** (Perro vs. Gato) y el uso de **datasets reales** preexistentes en la librería.
 
 ---
 
 ## 🧠 Contenido del Proyecto
 
-### 1️⃣ Análisis Exploratorio de Datos (EDA)
-- Inspección y limpieza de datos
-- Identificación de variables independientes (features) y dependientes (target)
-- Visualización de correlaciones mediante gráficos
+### 1️⃣ Conceptos Fundamentales de Clasificación
+- **Problema de Clasificación Binaria:** Se introduce la clasificación binaria (dos posibles resultados) mediante la distinción entre **Perros y Gatos**.
+- **Características (Features) y Etiquetas (Labels):**
+    * **Features (X):** Características de entrada (ej. ¿Tiene pelo largo?, ¿Tiene las uñas afiladas?, ¿Hace miau?).
+    * **Labels (Y):** Clase o etiqueta de salida (ej. 0 = Perro, 1 = Gato).
+- **Modelos Utilizados:** Se utiliza el clasificador **Gaussian Naive Bayes** (`GaussianNB`) de Scikit-learn para el ejemplo inicial, conocido por su simplicidad y velocidad.
 
-### 2️⃣ Implementación de Modelos de Clasificación
-- División de datos en conjuntos de **entrenamiento** y **prueba**
-- Entrenamiento de modelos de clasificación utilizando algoritmos como:
-  - Regresión logística
-  - K-Vecinos más cercanos (KNN)
-  - Árboles de decisión
-  - Bosques aleatorios (Random Forest)
-  - Máquinas de soporte vectorial (SVM)
-- Evaluación del rendimiento utilizando métricas como precisión, recall, F1-score y matriz de confusión
+### 2️⃣ Entrenamiento, Predicción y Evaluación
+- **Entrenamiento (Fit):** Se demuestra el proceso de **entrenamiento del modelo** pasando las features (`X`) y los labels (`Y`) al método `.fit()` del clasificador.
+- **Predicción (Predict):** Se utiliza el modelo entrenado con `.predict()` para predecir la etiqueta de una nueva instancia de datos (ej. un animal con nuevas características).
+- **Evaluación del Modelo:** La precisión del modelo se evalúa mediante el cálculo del **Accuracy** (o `score`), que indica el porcentaje de predicciones correctas.
 
-### 3️⃣ Optimización de Modelos
-- Ajuste de hiperparámetros utilizando búsqueda en cuadrícula (GridSearchCV)
-- Validación cruzada para estimar el rendimiento del modelo
-
-### 4️⃣ Predicción y Evaluación
-- Aplicación del modelo entrenado para predecir nuevas instancias
-- Interpretación de resultados y evaluación de la capacidad de generalización del modelo
+### 3️⃣ Uso de Datasets de SKLearn
+- **Datasets Integrados:** Se aprovechan los datasets de demostración que vienen con la librería, como el famoso dataset **Iris**.
+- **Preprocesamiento:** Se demuestra el uso de utilidades de Scikit-learn para preprocesar los datos, como la función `train_test_split` para dividir el dataset en conjuntos de **entrenamiento y prueba**.
+- **Diagrama del Proceso:** El flujo de trabajo se representa visualmente (a través de un diagrama de flujo) que resume los pasos: **Obtener Datos -> Separar Muestras -> Entrenar -> Predecir -> Evaluar**.
 
 ---
 
 ## 🛠️ Librerías Utilizadas
-| Librería       | Uso principal                               |
+
+| Librería       | Uso principal                               |
 |----------------|---------------------------------------------|
-| **NumPy**      | Cálculos numéricos y manipulación de arrays |
-| **Pandas**     | Manipulación y análisis de datos tabulares  |
-| **Scikit-learn** | Implementación de modelos de clasificación y evaluación |
-| **Matplotlib** | Creación de gráficos estáticos              |
-| **Jupyter**    | Entorno interactivo para desarrollo y visualización |
+| **Scikit-learn**| Importación de datasets, Modelos de Clasificación (`GaussianNB`) y Métodos de Evaluación (`accuracy_score`)|
+| **NumPy**      | Creación y manejo de *arrays* para Features y Labels|
 
 ---
 
 ## 🎯 Objetivo del Proyecto
-Aplicar técnicas de **aprendizaje supervisado** para construir y evaluar modelos de clasificación que permitan predecir categorías o clases en función de variables independientes, utilizando Python y sus librerías científicas.
+El proyecto tiene como objetivo introducir el **paradigma de Machine Learning Supervisado (Clasificación)**, demostrando cómo se construye, entrena y evalúa un modelo de clasificación utilizando la sintaxis de **Scikit-learn**, preparando al usuario para problemas más complejos como la clasificación de texto o detección de fraude.
 
 ---
 
-## 📈 Resultados Esperados
-- Desarrollo de modelos de clasificación con capacidad de generalización
-- Evaluación del rendimiento de los modelos utilizando métricas estándar
-- Comparación entre diferentes algoritmos de clasificación
-
----
+## 📈 Resultados Clave
+- Se logra entrenar un modelo que puede distinguir entre un perro y un gato (clasificación binaria).
+- Se obtiene una **métrica de precisión (Accuracy)** que cuantifica la efectividad del modelo.
+- Se establece el flujo de trabajo estándar para cualquier problema de Machine Learning: **Separación de Datos, Entrenamiento y Evaluación**.
 
